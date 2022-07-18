@@ -33,7 +33,7 @@
         <div id="seconds">00</div>
       </div>
       <div class="ap">
-        <div id="ampm">PM</div>
+        <div id="ampm">AM</div>
       </div>
     </div>
     <script>
@@ -41,7 +41,7 @@
         let hours = document.getElementById("hours");
         let minutes = document.getElementById("minutes");
         let seconds = document.getElementById("seconds");
-        let ampm = document.getElementById("ampm ");
+        let ampm = document.getElementById("ampm");
 
         let hh = document.getElementById("hh");
         let mm = document.getElementById("mm");
@@ -62,12 +62,12 @@
         if (h > 12) {
           h = h - 12;
         }
- 
+
         h = h < 10 ? "0" + h : h;
         m = m < 10 ? "0" + m : m;
         s = s < 10 ? "0" + s : s;
 
-        hours.innerHTML = h + "<br><span>Hours</span>"; 
+        hours.innerHTML = h + "<br><span>Hours</span>";
         minutes.innerHTML = m + "<br><span>Minutes</span>";
         seconds.innerHTML = s + "<br><span>Seconds</span>";
         ampm.innerHTML = am;
@@ -79,7 +79,9 @@
         hr_dot.style.transform = `rotate(${h * 30}deg)`;
         min_dot.style.transform = `rotate(${m * 6}deg)`;
         sec_dot.style.transform = `rotate(${s * 6}deg)`;
-      });
+
+        
+      })
     </script>
   </body>
 </html>
